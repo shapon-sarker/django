@@ -20,7 +20,6 @@ class Album(models.Model):
 
 
 
-
     num_stars = models.IntegerField()
 
 
