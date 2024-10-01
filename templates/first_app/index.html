@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <title>My First Project</title>
+</head>
+
+
+
+<body>
+    <img src="{% static 'images/capture.jpg' %}" alt="My Image">
+    <h1>Welcome to My First Project</h1>
+    <p>This is the index page of html </p>
+    {{ text_1 }}
+    
+
+    <h2>List of Musicians</h2>
+
+    <table border="1">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Instrument</th>
+        </tr>
+        {% for musician in Musician %}
+        <tr>
+            <td>{{ musician.first_name }}</td>
+            <td>{{ musician.last_name }}</td>
+            <td>{{ musician.instrument }}</td>
+        </tr>
+        {% endfor %}
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <h3>List of Album</h3>
+    <table border="1">
+        <tr>
+            <th>Artist</th>
+            <th>Album Name</th>
+            <th>Release Date</th>
+            <th>Number of Stars</th>
+        </tr>
+        {% for album in Album %}
+        <tr>
+            <td>{{ album.artist }}</td>
+            <td>{{ album.name }}</td>
+            <td>{{ album.release_date }}</td>
+            <td>{{ album.num_stars }}</td>
+        </tr>
+        {% endfor %}
+    
+
+
+
+
+</body>
+</html>
