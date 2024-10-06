@@ -8,8 +8,9 @@ class Musician(models.Model):
     last_name = models.CharField(max_length=50)
     instrument = models.CharField(max_length=100)
 
-def __str__(self):
-    return self.first_name + " " + self.last_name
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+
 
 
 class Album(models.Model):
@@ -23,7 +24,7 @@ class Album(models.Model):
     num_stars = models.IntegerField()
 
 
-def __str__(self):
-    return self.name + " " + self.release_date
+    def __str__(self):
+        return self.name + " " + self.release_date
 
 
