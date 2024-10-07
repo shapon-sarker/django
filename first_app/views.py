@@ -33,6 +33,7 @@ def musician_form(request):
 
 
 def album_form(request):
+  
     if request.method == 'POST':
         form = forms.AlbumForm(request.POST)
         if form.is_valid():
@@ -44,6 +45,7 @@ def album_form(request):
     else:
         # GET request, create a new empty form
         form = forms.AlbumForm()
+
 
     diction = {'title': 'Add Album', 'album_form': form}
     return render(request, 'first_app/album_form.html', context=diction)
